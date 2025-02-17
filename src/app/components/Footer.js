@@ -1,4 +1,5 @@
 // components/Footer.js
+import Image from "next/image";
 import { FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
@@ -7,8 +8,14 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
         {/* Brand Section */}
         <div>
-          <h2 className="text-xl font-bold text-blue-900">BANTUIN</h2>
-          <p className="mt-2 text-sm">
+          <Image
+            src="/assets_sibantuin_logo.png"
+            alt={""}
+            className="object-cover h-[70px] w-[140px]"
+            width={500}
+            height={500}
+          />
+          <p className="text-[#5D5A88] pb-4">
             Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam mauris sed ma
           </p>
           <div className="flex gap-3 mt-4">
@@ -22,9 +29,9 @@ export default function Footer() {
         </div>
 
         {/* Links Sections */}
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900">Product</h3>
-          <ul className="mt-2 space-y-2 text-sm">
+        <div className="mt-4">
+          <h3 className="text-lg ml-12 font-bold text-[#5D5A88]">Product</h3>
+          <ul className="mt-2 ml-12 space-y-2 text-sm text-[#9795B5]">
             <li>Features</li>
             <li>Pricing</li>
             <li>Case studies</li>
@@ -33,9 +40,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900">Company</h3>
-          <ul className="mt-2 space-y-2 text-sm">
+        <div className="mt-4">
+          <h3 className="text-lg ml-8 font-bold text-[#5D5A88]">Company</h3>
+          <ul className="mt-2 ml-8 space-y-2 text-sm text-[#9795B5]">
             <li>About</li>
             <li>Contact us</li>
             <li>Careers</li>
@@ -44,9 +51,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900">Support</h3>
-          <ul className="mt-2 space-y-2 text-sm">
+        <div className="mt-4">
+          <h3 className="text-lg ml-8 font-bold text-[#5D5A88]">Support</h3>
+          <ul className="mt-2 ml-8 space-y-2 text-sm text-[#9795B5]">
             <li>Getting started</li>
             <li>Help center</li>
             <li>Server status</li>
@@ -55,9 +62,9 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900">Downloads</h3>
-          <ul className="mt-2 space-y-2 text-sm">
+        <div className="mt-4">
+          <h3 className="text-lg ml-8 font-bold text-[#5D5A88]">Downloads</h3>
+          <ul className="mt-2 ml-8 space-y-2 text-sm text-[#9795B5]">
             <li>iOS</li>
             <li>Android</li>
             <li>Mac</li>
@@ -68,10 +75,10 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-center text-sm text-gray-500 mt-6 border-t pt-4">
+      <div className="text-center text-sm text-[#6E7191] mt-6 border-t pt-8 mt-[66px]">
         Copyright © 2023 BRIX Templates | All Rights Reserved |
-        <a href="#" className="text-blue-600"> Terms and Conditions </a> |
-        <a href="#" className="text-blue-600"> Privacy Policy</a>
+        <a href="#" className="text-[#ADABC3]"> Terms and Conditions </a> |
+        <a href="#" className="text-[#ADABC3]"> Privacy Policy</a>
       </div>
     </footer>
   );

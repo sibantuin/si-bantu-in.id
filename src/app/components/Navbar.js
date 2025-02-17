@@ -49,7 +49,7 @@ export default function Navbar() {
         </div>
 
         {/* Get Started Button */}
-        <button className="primary-color text-white px-8 py-2 pr-6 rounded-full hover:bg-blue-900 flex items-center ml-6">
+        <button className="primary-color text-white font-bold px-8 py-2 pr-6 rounded-full hover:bg-blue-900 flex items-center ml-6">
           Order
           <svg
             className="w-5 h-5 ml-2 mt-3"
