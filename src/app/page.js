@@ -2,24 +2,25 @@
 
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [openFAQ, setOpenFAQ] = useState(null);
   const services = [
-    { title: "Mobile app", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "Desktop app", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "Multiple users", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "Integrations", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "Monthly reports", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "Granular permissions", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "Cloud storage", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "Security compliance", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "API support", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "Real-time updates", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "Custom workflows", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
-    { title: "AI integration", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." }
+    { title: "IT", description: "Menyediakan layanan berupa solving bug, UI/UX, website, mobile app serta berbagai bahasa pemrograman" },
+    { title: "Penulisan", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "Skripsi & KTI", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "Design Grafis", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "Photo & Video Editing", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "Video Tutorial", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "CV", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "Voice Over/Transkrip", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "Skripsi & KTI", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "Mind Mapping", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "Photo & Video", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." },
+    { title: "Animasi", description: "Lorem ipsum dolor sit amet consecte tur adipiscing..." }
   ];
 
   const faqs = [
@@ -49,28 +50,52 @@ export default function Home() {
       <Navbar />
       <main className="container mx-auto px-8">
         {/* Hero Section */}
-        <section className="hero flex items-center justify-between py-16">
-          <div className="max-w-lg">
-            <h1 className="text-4xl font-bold text-gray-900 leading-tight">
-              A dedicated team to grow your company
+        <section className="hero flex items-center justify-between py-5 px-10">
+          <div className="max-w-lg pl-20">
+            <h1 className="text-[40px] font-bold text-gray-900 leading-tight text-left">
+              A dedicated team to <br/>grow your company
             </h1>
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-500 mt-4">
               Lorem ipsum dolor sit amet consectetur adipiscing elit mattis sit pharellus mollis sit aliquam sit nullam neque ultrices.
             </p>
-            <button className="mt-6 bg-blue-800 text-white px-6 py-3 rounded-full hover:bg-blue-900 flex items-center">
-              Get started →
+            <button className="mt-6 primary-color text-white px-6 py-3 rounded-full hover:bg-blue-900 flex items-center">
+              GRATIS Konsultasi
+              <svg
+                className="w-5 h-5 ml-2 mt-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+              </svg>
             </button>
           </div>
-          <div className="w-96 h-96 bg-blue-300 rounded-xl flex items-center justify-center">
-            <span className="text-gray-500">📷</span>
+          <div className="w-110 h-96 rounded-xl flex items-center justify-center pr-20">
+            <Image
+              src="/assets_heroes.png"
+              alt={""}
+              className="object-contain h-full w-full"
+              width={1000}
+              height={1000}
+            />
           </div>
         </section>
 
         {/* Team Section */}
         <section className="team text-center py-16">
           <h2 className="text-3xl font-bold text-gray-900">Meet our team members</h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada quam commodo id integer nam.
+          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+            Part of SIBANTUIN, dedicated to serving you wholeheartedly. Each Team <br />Member Brings Their Own Uniqueness – Together, We Create Magic.
+          </p>
+          <p>
+            
           </p>
           <div className="flex justify-center gap-8 mt-12">
             {[...Array(5)].map((_, index) => (
@@ -79,16 +104,16 @@ export default function Home() {
                   📷
                 </div>
                 <h3 className="text-blue-800 font-bold mt-4">Lorem ipsum</h3>
-                <p className="text-gray-600 text-sm">{index === 0 ? "CEO & Co-Founder" : index === 1 ? "CTO & Co-Founder" : index === 2 ? "VP of Marketing" : index === 3 ? "VP of Marketing" : "VP of Design"}</p>
+                <p className="text-gray-600 text-sm">{index === 0 ? "CEO & Co-Founder" : index === 1 ? "CTO & Co-Founder" : index === 2 ? "Lead Project" : index === 3 ? "VP of Technology" : "VP of Design"}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Layanan Bimbingan Section */}
         <section className="services text-center py-16">
-          <h2 className="text-3xl font-bold text-gray-900">Service</h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900">Layanan Bimbingan</h2>
+          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
             Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan.
           </p>
           <div className="relative mt-12 overflow-hidden">
@@ -108,7 +133,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <button onClick={serviceSlider} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-400 p-3 rounded-full shadow-lg">
+            <button onClick={serviceSlider} className="absolute right-0 top-1/2 transform -translate-y-1/2 primary-color text-white p-3 rounded-full shadow-lg">
               →
             </button>
           </div>
@@ -120,17 +145,17 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-8 mt-8">
             <div className="text-center">
               <h3 className="text-4xl font-bold text-gray-800">99%</h3>
-              <p className="font-semibold text-gray-700">Customer satisfaction</p>
+              <p className="font-semibold text-gray-700">Kepuasa Pengguna</p>
               <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipiscing elit eget quamumto.</p>
             </div>
             <div className="text-center">
-              <h3 className="text-4xl font-bold text-gray-800">32M</h3>
-              <p className="font-semibold text-gray-700">Active users</p>
+              <h3 className="text-4xl font-bold text-gray-800">10+</h3>
+              <p className="font-semibold text-gray-700">Team Pengajar</p>
               <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipiscing elit eget quamumto.</p>
             </div>
             <div className="text-center">
               <h3 className="text-4xl font-bold text-gray-800">240%</h3>
-              <p className="font-semibold text-gray-700">Company growth</p>
+              <p className="font-semibold text-gray-700">Rating Pengguna</p>
               <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipiscing elit eget quamumto.</p>
             </div>
           </div>
@@ -186,8 +211,6 @@ export default function Home() {
         </section>
 
         <Footer />
-
-
       </main>
     </>
   );

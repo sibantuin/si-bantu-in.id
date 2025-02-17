@@ -6,9 +6,9 @@
   @apply min-h-screen p-8;
 }
 
-.hero h1 {
+/* .hero h1 {
   @apply text-4xl font-bold mb-8 text-center;
-}
+} */
 
 .content {
   @apply grid md:grid-cols-2 gap-8 max-w-6xl mx-auto;
@@ -16,4 +16,8 @@
 
 .percentage {
   @apply text-6xl font-bold text-blue-600;
+}
+
+.primary-color {
+  @apply bg-[#1E3A8A];
 }
