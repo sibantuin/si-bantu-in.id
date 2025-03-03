@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "BANTUIN",
+  title: "SIBANTUIN",
   description: "Your dedicated service platform",
 };
 
