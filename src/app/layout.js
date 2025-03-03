@@ -1,4 +1,3 @@
-// src/app/layout.js
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -10,6 +9,9 @@ const inter = Inter({
 export const metadata = {
   title: "SIBANTUIN",
   description: "Your dedicated service platform",
+  icon: {
+    icon: '/ic_sibantuin.svg'
+  }
 };
 
 export default function RootLayout({ children }) {

@@ -93,186 +93,151 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="container mx-auto px-8">
+      <main className="container mx-auto px-4 sm:px-8 lg:px-16">
         {/* Hero Section */}
-        <section id="hero" className="hero flex items-center justify-between py-5 px-10">
-          <div className="max-w-lg pl-20">
-            <h1 className="text-[40px] font-bold text-gray-900 leading-tight text-left">
-              A dedicated team to <br/>grow your company
+        <section id="hero" className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16 gap-8">
+          <div className="lg:flex-1 text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+              A dedicated team to <br className="hidden lg:block"/>grow your company
             </h1>
-            <p className="text-[#959595] mt-4">
+            <p className="text-[#959595] text-base sm:text-lg mb-8 max-w-xl lg:max-w-none mx-auto lg:mx-0">
               Lorem ipsum dolor sit amet consectetur adipiscing elit mattis sit pharellus mollis sit aliquam sit nullam neque ultrices.
             </p>
-            <button className="mt-6 primary-color text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-900 flex items-center">
+            <button className="bg-[#1E3A8A] text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-900 inline-flex items-center mx-auto lg:mx-0">
               GRATIS Konsultasi
-              <svg
-                className="w-5 h-5 ml-2 mt-3"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-              >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="M1 5h12m0 0L9 1m4 4L9 9"
-                  />
+              <svg className="w-5 h-5 ml-2 mt-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M1 5h12m0 0L9 1m4 4L9 9"/>
               </svg>
             </button>
           </div>
-          <div className="w-110 h-96 rounded-xl flex items-center justify-center pr-20">
+          <div className="lg:flex-1 w-full max-w-2xl">
             <Image
               src="/assets_heroes.png"
-              alt={""}
-              className="object-contain h-full w-full"
-              width={1000}
-              height={1000}
+              alt="Hero Illustration"
+              width={800}
+              height={600}
+              className="w-full h-auto object-contain"
+              priority
             />
           </div>
         </section>
 
         {/* Team Section */}
-        <section className="team text-center py-16">
-          <h2 className="text-3xl font-bold text-gray-900">Meet our team members</h2>
-          <p className="text-[#959595] mt-4 max-w-2xl mx-auto">
-            Kenalin, tim kita yang selalu siap bantu lo! 🚀✨ Yuk, kenalan lebih dekat<br/> sama mereka. Siapa tau lo bisa ketemu temen baru di sini. 😎
+        <section className="py-12 lg:py-16 text-center">
+          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Meet our team members</h2>
+          <p className="text-[#959595] mb-8 max-w-2xl mx-auto px-4">
+            Kenalin, tim kita yang selalu siap bantu lo! 🚀✨ Yuk, kenalan lebih dekat sama mereka. Siapa tau lo bisa ketemu temen baru di sini. 😎
           </p>
-          <div className="flex justify-center gap-8 gap-x-[200px] mt-[55px]">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-12 px-4">
             {teamData.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto">
+              <div key={index} className="w-1/2 sm:w-1/3 md:w-auto px-2">
+                <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full mx-auto mb-4 overflow-hidden">
                   <Image
                     src={member.img}
                     alt={member.name}
-                    className="h-full w-full object-cover rounded-full"
-                    width={100}
-                    height={100}
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-[#1E3A8A] font-bold mt-4">{member.name}</h3>
-                <p className="text-[#9795B5] text-sm">{member.role}</p>
+                <h3 className="text-[#1E3A8A] font-bold text-sm lg:text-base">{member.name}</h3>
+                <p className="text-[#9795B5] text-xs lg:text-sm">{member.role}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Services Section */}
-        <section id="service" className="services justify-start py-[36px]">
-          <h2 className="text-gray-900 text-center text-3xl font-bold">Service</h2>
-          <p className="text-[#959595] text-center mt-4 max-w-2xl mx-auto">
-            Yuk, eksplor layanan kita! Semua ada di sini. <br/> 
-            Jangan ragu buat chat kita kalo lo butuh SIBANTUIN 😎✨
-          </p>
-          <div className="relative mt-12">
-            <div className="overflow-hidden">
-              <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${serviceIndex  * 100}%)` }}>
-                {[0, 1].map((i) => (
-                  <div key={i} className="grid grid-cols-3 gap-6 flex-shrink-0 w-full pr-4">
-                    {services.slice(i * 6, i * 6 + 6).map((service, index) => (
-                      <div key={index} className="p-6 border rounded-lg shadow-sm relative">
-                        <div className="w-16 h-16 bg-gray-200 rounded-full mb-4">
-                          <Image
-                            src={service.img}
-                            alt={service.title}
-                            className="h-full w-full object-cover rounded-2xl"
-                            width={100}
-                            height={100}
-                          />
-                        </div>
-                        <h3 className="text-[#1E1E1E] text-lg font-bold">{service.title}</h3>
-                        <p className="text-[#1E1E1E] text-sm mt-2 text-left">{service.description}</p>
-                        <a href="#" className="text-[#8D8BA7] font-semibold mt-4 inline-flex items-center hover:text-[#5D5A88]">
-                          Learn more
-                          <svg
-                            className="w-5 h-5 ml-2 mt-3"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 20 20"
-                          >
-                            <path
-                              stroke="currentColor"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="1.5"
-                              d="M1 5h12m0 0L9 1m4 4L9 9"
-                            />
-                          </svg>
-                        </a>
+        <section id="service" className="py-12 lg:py-16">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-4">Service</h2>
+            <p className="text-[#959595] text-center mb-8 max-w-3xl mx-auto px-4">
+              Yuk, eksplor layanan kita! Semua ada di sini.<br className="hidden lg:block"/> Jangan ragu buat chat kita kalo lo butuh SIBANTUIN 😎✨
+            </p>
+            <div className="relative px-4">
+              <div className="overflow-hidden">
+                <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${serviceIndex * 100}%)` }}>
+                  {[0, 1].map((i) => (
+                    <div key={i} className="w-full flex-shrink-0 pr-10">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {services.slice(i * 6, i * 6 + 6).map((service, index) => (
+                          <div key={index} className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <div className="w-16 h-16 bg-gray-100 rounded-xl mb-4 overflow-hidden">
+                              <Image
+                                src={service.img}
+                                alt={service.title}
+                                width={64}
+                                height={64}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                            <h3 className="text-lg font-bold text-[#1E1E1E] mb-2">{service.title}</h3>
+                            <p className="text-sm text-[#1E1E1E] mb-4">{service.description}</p>
+                            <a href="#" className="text-[#8D8BA7] font-semibold inline-flex items-center hover:text-[#5D5A88]">
+                              Learn more
+                              <svg className="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 5 7 7-7 7"/>
+                              </svg>
+                            </a>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <button 
-              onClick={serviceSlider} 
-              className="absolute right-0 top-[40%] -translate-y-1/2 bg-[#1E3A8A] mt-[50px] text-white p-3 rounded-full shadow-lg hover:bg-[#0D2A6B] transform transition-all duration-300"
-              style={{ right: '-40px' }}
-            >
-              <svg
-                className="w-6 h-6"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
+              <button 
+                onClick={serviceSlider}
+                className="absolute top-1/2 -translate-y-1/2 right-0 bg-[#1E3A8A] text-white p-3 rounded-full shadow-lg hover:bg-[#0D2A6B] transition-colors"
               >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="m9 5 7 7-7 7"
-                />
-              </svg>
-            </button>
+                <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 5 7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </section>
 
-        {/* Results in Numbers Section */}
-        <section className="results text-center py-16 mt-[50px]">
-          <h2 className="text-3xl font-bold text-[#1E3A8A]">Our results in numbers</h2>
-          <div className="grid grid-cols-3 gap-8 mt-8">
-            <div className="text-center">
-              <h3 className="text-4xl font-bold">
-                <span className="text-[#1E3A8A]">4</span>
-              </h3>
-              <p className="font-bold mt-[20px] mb-[10px] text-[#686868]">Jumlah Pengguna</p>
+        {/* Results Section */}
+        <section className="py-12 lg:py-16 text-center">
+          <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A8A] mb-8">Our results in numbers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto px-4">
+            <div className="p-6">
+              <h3 className="text-4xl font-bold text-[#1E3A8A] mb-2">4</h3>
+              <p className="font-semibold text-[#686868]">Jumlah Pengguna</p>
             </div>
-            <div className="text-center">
-              <h3 className="text-4xl font-bold text-[#1E3A8A]">10+</h3>
-              <p className="font-bold mt-[20px] mb-[10px] text-[#686868]">Team Pengajar</p>
+            <div className="p-6">
+              <h3 className="text-4xl font-bold text-[#1E3A8A] mb-2">10+</h3>
+              <p className="font-semibold text-[#686868]">Team Pengajar</p>
             </div>
-            <div className="text-center">
-              <h3 className="text-4xl font-bold">
-                <span className="text-[#1E3A8A]">4.8/5</span>
-              </h3>
-              <p className="font-bold mt-[20px] mb-[10px] text-[#686868]">Rating Pengguna</p>
+            <div className="p-6">
+              <h3 className="text-4xl font-bold text-[#1E3A8A] mb-2">4.8/5</h3>
+              <p className="font-semibold text-[#686868]">Rating Pengguna</p>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="faq text-center pt-16 mb-[200px]">
+        <section id="faq" className="faq text-center pt-16 lg:mb-[200px] px-4 lg:px-0">
           <h2 className="text-3xl font-bold text-[#1E3A8A]">Frequently Asked Questions</h2>
           <p className="text-[#959595] mt-4 mb-12 max-w-2xl mx-auto">
-            Masih bingung? Santai, kita udah siapin FAQ buat lo! Scroll aja ke bawah, siapa tau <br/> pertanyaan lo udah ada jawabannya. Kalo belum, chat kita aja!
+            Masih bingung? Santai, kita udah siapin FAQ buat lo! Scroll aja ke bawah, siapa tau <br className="hidden lg:block"/> 
+            pertanyaan lo udah ada jawabannya. Kalo belum, chat kita aja!
           </p>
+          
           <div className="mt-8 max-w-2xl mx-auto">
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
                 className={`border ${
-                  openFAQ === index ? 'border-[1px] border-[#5D5A88]' : 'border-[#D4D2E3]'
+                  openFAQ === index ? 'border-[1px] border-[#5D5A88] mb-4' : 'border-[#D4D2E3]'
                 } rounded-lg mb-4 overflow-hidden transition-all duration-500 ease-in-out`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full text-[#1E3A8A] text-left pt-4 px-8 mb-4 font-bold flex justify-between items-center transition-colors duration-500"
+                  className="w-full text-[#1E3A8A] text-left pt-4 px-4 lg:px-8 mb-4 font-bold flex justify-between items-center transition-colors duration-500"
                 >
-                  {faq.question}
+                  <span className="text-sm lg:text-base">{faq.question}</span>
                   <span className="transition-transform duration-500">
                     {openFAQ === index ? (
                       <svg
@@ -292,7 +257,7 @@ export default function Home() {
                       </svg>
                     ) : (
                       <svg
-                        className="w-6 h-6 ml-2 text-[#8D8BA7] transform"
+                        className="w-6 h-6 ml-2 text-[#8D8BA7]"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -309,16 +274,17 @@ export default function Home() {
                     )}
                   </span>
                 </button>
-                <div className={`px-8 text-[#959595] text-justify overflow-hidden transition-all duration-500 ${
+                <div className={`px-4 lg:px-8 text-[#959595] text-justify overflow-hidden transition-all duration-500 ${
                   openFAQ === index ? 'max-h-[500px] opacity-100 mb-6' : 'max-h-0 opacity-0'
                 }`}>
-                  {faq.answer}
+                  <p className="text-sm lg:text-base">
+                    {faq.answer}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
         </section>
-
         <Footer />
       </main>
     </>
