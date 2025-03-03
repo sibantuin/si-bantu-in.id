@@ -21,52 +21,52 @@ export default function Home() {
     { 
       title: "IT", 
       description: "Website, UI/UX, Mobile app, Solving Bug dan berbagai project bahasa pemrograman lainnya.",
-      img: "/assets_IT.png" 
+      img: "/Assets_IT.png" 
     },
     { 
       title: "Penulisan", 
       description: "Dapat merapikan All Formating, Nomor halaman, Daftar Pustaka, Tabel, Gambar, Layout, Margin dll",
-      img: "/assets_P.png" 
+      img: "/Assets_P.png" 
     },
     { 
       title: "Skripsi & Laporan dkk", 
       description: "Layanan bimbingan Skripsi, PPT, Mind Mapping, Laporan Magang, Resume KTI, Essay, Jurnal serta penerbitan.",
-      img: "/assets_S.png" 
+      img: "/Assets_S.png" 
     },
     { 
       title: "Desain Grafis", 
       description: "Poster, Infografis, Feeds, Banner, Twibbon, Logo, Mockup, Background, Spanduk, Brosur, Menu, Id Card dll.",
-      img: "/assets_DG.png" 
+      img: "/Assets_DG.png" 
     },
     { 
       title: "Foto & Video", 
       description: "Jasa edit Photo & Video serta pembuatan seperti video tutorial, Reels, Youtube dll.",
-      img: "/assets_PV.png" 
+      img: "/Assets_PV.png" 
     },
     { 
       title: "CV ATS Friendly", 
       description: "Pembuatan CV sesuai kebutuhan seperti lamar kerja, magang ataupun beasiswa.",
-      img: "/assets_CV.png" 
+      img: "/Assets_CV.png" 
     },
     { 
       title: "Voice Over/Transkrip", 
       description: "Pembuatan Voice Over dan Script untuk kebutuhan dubbing, animasi, komersial dll.",
-      img: "/assets_VO.png" 
+      img: "/Assets_VO.png" 
     },
     { 
       title: "Motion Graphic", 
       description: "membantu pembuatan video motion graphic untuk berbagai keperluan, seperti promosi di media sosial.",
-      img: "/assets_MG.png" 
+      img: "/Assets_MG.png" 
     },
     { 
       title: "Animation", 
       description: "Menyediakan jasa pembuatan video animasi 2D dan 3D untuk keperluan promosi, iklan, video pembelajaran dll.",
-      img: "/assets_A.png" 
+      img: "/Assets_A.png" 
     },
     { 
       title: "Request Service", 
       description: "Tim kita yang selalu siap bantu lo!😎 Kapan aja dan lo butuh apapun, tinggal chat kita. 🚀✨ ",
-      img: "/assets_RS.png" 
+      img: "/Assets_RS.png" 
     },
   ];
 
@@ -266,7 +266,7 @@ export default function Home() {
                 key={index} 
                 className={`border ${
                   openFAQ === index ? 'border-[1px] border-[#5D5A88]' : 'border-[#D4D2E3]'
-                } rounded-lg mb-4 overflow-hidden transition-all duration-500 ease-in-out`} // Durasi diperpanjang
+                } rounded-lg mb-4 overflow-hidden transition-all duration-500 ease-in-out`}
               >
                 <button
                   onClick={() => toggleFAQ(index)}
