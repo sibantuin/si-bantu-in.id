@@ -55,7 +55,7 @@ export default function Home() {
     },
     { 
       title: "Motion Graphic", 
-      description: "membantu pembuatan video motion graphic untuk berbagai keperluan, seperti promosi di media sosial.",
+      description: "Membantu pembuatan video motion graphic untuk berbagai keperluan, seperti promosi di media sosial.",
       img: "/Assets_MG.png" 
     },
     { 
@@ -98,12 +98,12 @@ export default function Home() {
         <section id="hero" className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16 gap-8">
           <div className="lg:flex-1 text-center lg:text-left">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
-              A dedicated team to <br className="hidden lg:block"/>grow your company
+              Apapun itu situasinya,<br className="hidden lg:block"/>SIBANTUIN solusinya!
             </h1>
             <p className="text-[#959595] text-base sm:text-lg mb-8 max-w-xl lg:max-w-none mx-auto lg:mx-0">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit mattis sit pharellus mollis sit aliquam sit nullam neque ultrices.
+              Kita selalu siap terima permintaan lo, bahkan yang paling random sekalipun.<br className="hidden lg:block"/> Yuk, serahkan ke kita
             </p>
-            <button className="bg-[#1E3A8A] text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-900 inline-flex items-center mx-auto lg:mx-0">
+            <button onClick={() => window.location.href = "http://wa.me/6285183148307"} className="bg-[#1E3A8A] text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-900 inline-flex items-center mx-auto lg:mx-0">
               GRATIS Konsultasi
               <svg className="w-5 h-5 ml-2 mt-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M1 5h12m0 0L9 1m4 4L9 9"/>

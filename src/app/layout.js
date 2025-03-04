@@ -1,9 +1,11 @@
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+// Configure DM Sans font
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: "500", // Medium weight
+  variable: "--font-dm-sans",
 });
 
 export const metadata = {
@@ -24,7 +26,7 @@ export default function RootLayout({ children }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/flowbite-icons/1.0.0/flowbite-icons.min.css"
         />
       </head>
-      <body className={inter.variable}>
+      <body className={dmSans.variable}>
         {children}
       </body>
     </html>

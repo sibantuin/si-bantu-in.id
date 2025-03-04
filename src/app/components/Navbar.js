@@ -3,6 +3,8 @@ import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+
   
   return (
     <nav className="flex justify-between items-center h-24 px-4 sm:px-10 py-4 border-b">
@@ -19,7 +21,7 @@ export default function Navbar() {
       <div className="hidden md:flex items-center gap-8 pr-8">
         <div className="flex items-center space-x-8 text-gray-700">
           <div className="relative group px-3">
-            <button className="text-[#1E3A8A] hover:text-blue-600 flex items-center py-2">
+            <button className="text-[#1E3A8A] font-semibold hover:text-blue-600 flex items-center py-2">
               Dashboard
               <svg
                 className="w-5 h-5 ml-2 mt-4"
@@ -50,22 +52,22 @@ export default function Navbar() {
             </div>
           </div>
 
-          <a href="#" className="text-[#1E3A8A] hover:text-blue-600 px-3 py-2">
+          <a href="#" className="text-[#1E3A8A] font-semibold hover:text-blue-600 px-3 py-2">
             Career
           </a>
-          <a href="#" className="text-[#1E3A8A] hover:text-blue-600 px-3 py-2">
+          <a href="#" className="text-[#1E3A8A] font-semibold hover:text-blue-600 px-3 py-2">
             Promo
           </a>
           <a
             href="#faq"
-            className="text-[#1E3A8A] hover:text-blue-700 px-3 py-2"
+            className="text-[#1E3A8A] font-semibold hover:text-blue-700 px-3 py-2"
           >
             FAQ
           </a>
         </div>
 
         {/* Desktop Order Button */}
-        <button className="bg-[#1E3A8A] text-white font-semibold px-8 py-2 pr-6 rounded-full hover:bg-blue-900 flex items-center ml-6">
+        <button onClick={() => window.location.href = "http://wa.me/6285183148307"} className="bg-[#1E3A8A] text-white font-semibold px-8 py-2 pr-6 rounded-full hover:bg-blue-900 flex items-center ml-6">
           Order
           <svg
             className="w-5 h-5 ml-2 mt-3"
@@ -141,46 +143,74 @@ export default function Navbar() {
         >
           <div className="p-6">
             <div className="space-y-4">
-              <div className="text-[#1E3A8A] font-medium">Dashboard</div>
-              <a
-                href="#service"
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 hover:bg-gray-100 rounded"
+            <button 
+                onClick={() => setMobileDropdownOpen(!isMobileDropdownOpen)}
+                className="flex items-center justify-between w-full px-4 py-2 text-[#1E3A8A] font-semibold hover:bg-gray-100 rounded"
               >
-                Service
-              </a>
+                Dashboard
+                <svg
+                  className={`w-5 h-5 ml-2 transform transition-transform ${
+                    isMobileDropdownOpen ? 'rotate-180' : ''
+                  }`}
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                  />
+                </svg>
+              </button>
+              
+              {/* Dropdown items */}
+              {isMobileDropdownOpen && (
+                <div className="pl-6">
+                  <a
+                    href="#service"
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >
+                    Service
+                  </a>
+                  <a
+                    href="#"
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >
+                    Pricelist
+                  </a>
+                  <a
+                    href="#"
+                    onClick={() => setIsOpen(false)}
+                    className="block px-4 py-2 hover:bg-gray-100 rounded"
+                  >
+                    Referral Code
+                  </a>
+                </div>
+              )}
               <a
                 href="#"
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 hover:bg-gray-100 rounded"
-              >
-                Pricelist
-              </a>
-              <a
-                href="#"
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 hover:bg-gray-100 rounded"
-              >
-                Referral Code
-              </a>
-              <a
-                href="#"
-                onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 text-[#1E3A8A] hover:bg-gray-100 rounded"
+                className="block px-4 py-2 text-[#1E3A8A] font-semibold hover:bg-gray-100 rounded"
               >
                 Career
               </a>
               <a
                 href="#"
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 text-[#1E3A8A] hover:bg-gray-100 rounded"
+                className="block px-4 py-2 text-[#1E3A8A] font-semibold hover:bg-gray-100 rounded"
               >
                 Promo
               </a>
               <a
                 href="#faq"
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 text-[#1E3A8A] hover:bg-gray-100 rounded"
+                className="block px-4 py-2 text-[#1E3A8A] font-semibold hover:bg-gray-100 rounded"
               >
                 FAQ
               </a>
