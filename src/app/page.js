@@ -96,16 +96,16 @@ export default function Home() {
       <main className="container mx-auto px-4 sm:px-8 lg:px-16">
         {/* Hero Section */}
         <section id="hero" className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16 gap-8">
-          <div className="lg:flex-1 text-center lg:text-left">
+          <div className="lg:flex-1 text-center lg:text-left mb-[36px] lg:mb-0">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
               Apapun itu situasinya,<br className="hidden lg:block"/>SIBANTUIN solusinya!
             </h1>
             <p className="text-[#959595] text-base sm:text-lg mb-8 max-w-xl lg:max-w-none mx-auto lg:mx-0">
               Kita selalu siap terima permintaan lo, bahkan yang paling random sekalipun.<br className="hidden lg:block"/> Yuk, serahkan ke kita
             </p>
-            <button onClick={() => window.location.href = "http://wa.me/6285183148307"} className="bg-[#1E3A8A] text-white font-semibold px-8 py-3 rounded-full hover:bg-blue-900 inline-flex items-center mx-auto lg:mx-0">
+            <button onClick={() => window.location.href = "http://wa.me/6285183148307"} className="bg-[#1E3A8A] text-white font-medium px-8 py-3 rounded-full hover:bg-blue-900 inline-flex items-center mx-auto lg:mx-0 shadow-lg hover:bg-[#0D2A6B] transition-colors">
               GRATIS Konsultasi
-              <svg className="w-5 h-5 ml-2 mt-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <svg className="w-5 h-5 ml-2 mt-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M1 5h12m0 0L9 1m4 4L9 9"/>
               </svg>
             </button>
@@ -128,7 +128,7 @@ export default function Home() {
           <p className="text-[#959595] mb-8 max-w-2xl mx-auto px-4">
             Kenalin, tim kita yang selalu siap bantu lo! 🚀✨ Yuk, kenalan lebih dekat sama mereka. Siapa tau lo bisa ketemu temen baru di sini. 😎
           </p>
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-12 px-4">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-[96px] px-4">
             {teamData.map((member, index) => (
               <div key={index} className="w-1/2 sm:w-1/3 md:w-auto px-2">
                 <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-full mx-auto mb-4 overflow-hidden">
@@ -162,7 +162,7 @@ export default function Home() {
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {services.slice(i * 6, i * 6 + 6).map((service, index) => (
                           <div key={index} className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                            <div className="w-16 h-16 bg-gray-100 rounded-xl mb-4 overflow-hidden">
+                            <div className="w-16 h-16 rounded-xl mb-4 overflow-hidden">
                               <Image
                                 src={service.img}
                                 alt={service.title}
@@ -173,7 +173,7 @@ export default function Home() {
                             </div>
                             <h3 className="text-lg font-bold text-[#1E1E1E] mb-2">{service.title}</h3>
                             <p className="text-sm text-[#1E1E1E] mb-4">{service.description}</p>
-                            <a href="#" className="text-[#8D8BA7] font-semibold inline-flex items-center hover:text-[#5D5A88]">
+                            <a href="#" className="text-[#959595] font-medium inline-flex items-center hover:text-[#1E3A8A]">
                               Learn more
                               <svg className="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 5 7 7-7 7"/>

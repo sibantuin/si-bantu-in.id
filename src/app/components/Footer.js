@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="text-gray-700 py-10 px-4 sm:px-6 border-bottom">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-        <div className="text-center md:text-left">
+        <div className="text-center mt-[-20px] md:text-left">
           <div className="flex justify-center md:justify-start">
             <Image
               src="/assets_sibantuin_logo.png"
@@ -15,7 +15,7 @@ export default function Footer() {
               className="object-cover w-32 h-auto"
             />
           </div>
-          <p className="text-[#5D5A88] pb-4 mt-2 ml-1 text-sm md:text-base">
+          <p className="text-[#959595] pb-4 mt-2 ml-1 text-sm md:text-base">
           Kita selalu siap terima permintaan lo, bahkan yang paling random sekalipun.
           Yuk, serahkan ke kita
           </p>
@@ -39,31 +39,31 @@ export default function Footer() {
 
         {/* Product Section */}
         <div className="mt-8 md:mt-0 text-center md:text-left">
-          <h3 className="text-lg font-bold text-[#5D5A88] mb-4">Product</h3>
-          <ul className="space-y-3 text-sm md:text-base text-[#9795B5]">
-            <li className="hover:text-[#5D5A88] transition-colors">Service</li>
-            <li className="hover:text-[#5D5A88] transition-colors">Pricelist</li>
-            <li className="hover:text-[#5D5A88] transition-colors">Referral Code</li>
+          <h3 className="text-lg font-bold text-[#1E3A8A] mb-4">Product</h3>
+          <ul className="space-y-3 text-sm md:text-base text-[#959595]">
+            <li className="hover:text-[#1E3A8A] transition-colors">Service</li>
+            <li className="hover:text-[#1E3A8A] transition-colors">Pricelist</li>
+            <li className="hover:text-[#1E3A8A] transition-colors">Referral Code</li>
           </ul>
         </div>
 
         {/* Company Section */}
         <div className="mt-8 md:mt-0 text-center md:text-left">
-          <h3 className="text-lg font-bold text-[#5D5A88] mb-4">Company</h3>
-          <ul className="space-y-3 text-sm md:text-base text-[#9795B5]">
-            <li className="hover:text-[#5D5A88] transition-colors">About</li>
-            <li className="hover:text-[#5D5A88] transition-colors">Contact us</li>
-            <li className="hover:text-[#5D5A88] transition-colors">Service</li>
-            <li className="hover:text-[#5D5A88] transition-colors">FAQ</li>
-            <li className="hover:text-[#5D5A88] transition-colors">Testimoni</li>
+          <h3 className="text-lg font-bold text-[#1E3A8A] mb-4">Company</h3>
+          <ul className="space-y-3 text-sm md:text-base text-[#959595]">
+            <li className="hover:text-[#1E3A8A] transition-colors">About</li>
+            <li className="hover:text-[#1E3A8A] transition-colors">Contact us</li>
+            <li className="hover:text-[#1E3A8A] transition-colors">Service</li>
+            <li className="hover:text-[#1E3A8A] transition-colors">FAQ</li>
+            <li className="hover:text-[#1E3A8A] transition-colors">Testimoni</li>
           </ul>
         </div>
 
         {/* Support Section */}
         <div className="mt-8 md:mt-0 text-center md:text-left">
-          <h3 className="text-lg font-bold text-[#5D5A88] mb-4">Support</h3>
-          <ul className="space-y-3 text-sm md:text-base text-[#9795B5]">
-            <li className="hover:text-[#5D5A88] transition-colors">Chat support</li>
+          <h3 className="text-lg font-bold text-[#1E3A8A] mb-4">Support</h3>
+          <ul className="space-y-3 text-sm md:text-base text-[#959595]">
+            <li className="hover:text-[#1E3A8A] transition-colors">Chat support</li>
           </ul>
         </div>
       </div>

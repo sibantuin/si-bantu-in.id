@@ -21,10 +21,10 @@ export default function Navbar() {
       <div className="hidden md:flex items-center gap-8 pr-8">
         <div className="flex items-center space-x-8 text-gray-700">
           <div className="relative group px-3">
-            <button className="text-[#1E3A8A] font-semibold hover:text-blue-600 flex items-center py-2">
+            <button className="text-[#1E3A8A] font-medium hover:text-blue-600 flex items-center py-2">
               Dashboard
               <svg
-                className="w-5 h-5 ml-2 mt-4"
+                className="w-5 h-5 ml-2 mt-3"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -52,22 +52,22 @@ export default function Navbar() {
             </div>
           </div>
 
-          <a href="#" className="text-[#1E3A8A] font-semibold hover:text-blue-600 px-3 py-2">
+          <a href="#" className="text-[#1E3A8A] font-medium hover:text-blue-600 px-3 py-2">
             Career
           </a>
-          <a href="#" className="text-[#1E3A8A] font-semibold hover:text-blue-600 px-3 py-2">
+          <a href="#" className="text-[#1E3A8A] font-medium hover:text-blue-600 px-3 py-2">
             Promo
           </a>
           <a
             href="#faq"
-            className="text-[#1E3A8A] font-semibold hover:text-blue-700 px-3 py-2"
+            className="text-[#1E3A8A] font-medium hover:text-blue-700 px-3 py-2"
           >
             FAQ
           </a>
         </div>
 
         {/* Desktop Order Button */}
-        <button onClick={() => window.location.href = "http://wa.me/6285183148307"} className="bg-[#1E3A8A] text-white font-semibold px-8 py-2 pr-6 rounded-full hover:bg-blue-900 flex items-center ml-6">
+        <button onClick={() => window.location.href = "http://wa.me/6285183148307"} className="bg-[#1E3A8A] text-white font-medium px-8 py-2 pr-6 rounded-full hover:bg-blue-900 flex items-center ml-6 shadow-lg hover:bg-[#0D2A6B] transition-colors">
           Order
           <svg
             className="w-5 h-5 ml-2 mt-3"
@@ -143,26 +143,26 @@ export default function Navbar() {
         >
           <div className="p-6">
             <div className="space-y-4">
-            <button 
+              <button 
                 onClick={() => setMobileDropdownOpen(!isMobileDropdownOpen)}
-                className="flex items-center justify-between w-full px-4 py-2 text-[#1E3A8A] font-semibold hover:bg-gray-100 rounded"
+                className="flex items-center justify-between w-full px-4 py-2 text-[#1E3A8A] font-medium hover:bg-gray-100 rounded"
               >
                 Dashboard
                 <svg
-                  className={`w-5 h-5 ml-2 transform transition-transform ${
-                    isMobileDropdownOpen ? 'rotate-180' : ''
+                  className={`w-5 h-5 transform transition-transform duration-300 ${
+                    isMobileDropdownOpen ? 'rotate-180' : 'rotate-0'
                   }`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 20 20"
                 >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                  d="M5 7l5 5 5-5"
                   />
                 </svg>
               </button>
@@ -196,27 +196,27 @@ export default function Navbar() {
               <a
                 href="#"
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 text-[#1E3A8A] font-semibold hover:bg-gray-100 rounded"
+                className="block px-4 py-2 text-[#1E3A8A] font-medium hover:bg-gray-100 rounded"
               >
                 Career
               </a>
               <a
                 href="#"
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 text-[#1E3A8A] font-semibold hover:bg-gray-100 rounded"
+                className="block px-4 py-2 text-[#1E3A8A] font-medium hover:bg-gray-100 rounded"
               >
                 Promo
               </a>
               <a
                 href="#faq"
                 onClick={() => setIsOpen(false)}
-                className="block px-4 py-2 text-[#1E3A8A] font-semibold hover:bg-gray-100 rounded"
+                className="block px-4 py-2 text-[#1E3A8A] font-medium hover:bg-gray-100 rounded"
               >
                 FAQ
               </a>
               <button
                 onClick={() => setIsOpen(false)}
-                className="w-full bg-[#1E3A8A] text-white font-semibold px-8 py-2 rounded-full hover:bg-blue-900 mt-4"
+                className="w-full bg-[#1E3A8A] text-white font-medium px-8 py-2 rounded-full hover:bg-blue-900 mt-4 shadow-lg hover:bg-[#0D2A6B] transition-colors"
               >
                 Order
               </button>
