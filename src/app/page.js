@@ -154,14 +154,14 @@ export default function Home() {
             <p className="text-[#959595] text-center mb-8 max-w-3xl mx-auto px-4">
               Yuk, eksplor layanan kita! Semua ada di sini.<br className="hidden lg:block"/> Jangan ragu buat chat kita kalo lo butuh SIBANTUIN 😎✨
             </p>
-            <div className="relative px-4">
+            <div className="relative px-[16px]">
               <div className="overflow-hidden">
                 <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${serviceIndex * 100}%)` }}>
                   {[0, 1].map((i) => (
-                    <div key={i} className="w-full flex-shrink-0 pr-10">
+                    <div key={i} className="w-full flex-shrink-0 py-10 pr-10">
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {services.slice(i * 6, i * 6 + 6).map((service, index) => (
-                          <div key={index} className="p-6 border rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                          <div key={index} className="p-6 border rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative z-0 hover:z-10">
                             <div className="w-16 h-16 rounded-xl mb-4 overflow-hidden">
                               <Image
                                 src={service.img}
