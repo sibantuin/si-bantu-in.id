@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SIBANTUIN Website
 
-## Getting Started
+<!-- ## Background
 
-First, run the development server:
+Skin diseases are often considered normal, but in some cases skin diseases can be dangerous and deadly, moreover skin diseases can be contagious. Skin diseases that appear are sometimes difficult to distinguish because they have almost similar symptoms for the lay eye. Sources circulating on the internet sometimes provide information that is general enough to make it difficult for sufferers to ascertain the skin disease they are experiencing. Eczema, Psoriasis and Dermatitis are skin diseases that have the same skin conditions, namely itching, redness, and inflammation. Therefore, we have the idea to create an application that can help ordinary people to be able to distinguish the skin disease based only on the rash or the redness on the skin.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Plan
+
+-   [x] Design UI/UX using Figma
+-   [x] UI Slicing
+-   [x] Componentization each Page and 
+-   [x] Integrating and Implementing CameraX for the skin detection feature
+-   [x] Detection History
+-   [x] Testing
+
+## Features
+
+-   Articles of skin awareness
+-   Skin disease detection
+-   History detection
+-   Bookmark articles -->
+
+## Minimum Requirement
+
+-   Visual Studio | 2025.1.1
+
+<!-- ## Installation Instructions
+
+Fork and clone the forked repository:
+
+```shell
+git clone git://github.com/<your_fork>/RashIO-Mobile
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate into cloned repository:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```shell
+cd RashIO-Mobile
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+After everything is done, you can build the application using android studio and run this project.
 
-## Learn More
+## Credits
 
-To learn more about Next.js, take a look at the following resources:
+We would like to thank the makers of these cool plugins
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   [Hilt](https://dagger.dev/hilt/)
+-   [Retrofit2](https://square.github.io/retrofit/)
+-   [Glide](https://github.com/bumptech/glide) -->

@@ -11,8 +11,13 @@ const dmSans = DM_Sans({
 export const metadata = {
   title: "SIBANTUIN",
   description: "Your dedicated service platform",
-  icon: {
-    icon: '/ic_sibantuin.svg'
+  icons: {
+    icon: [
+      {
+        url: '/ic_sibantuin.svg',
+        type: 'image/svg+xml',
+      }
+    ]
   }
 };
 
