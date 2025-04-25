@@ -97,7 +97,6 @@ export default function Home() {
       role: "Manajemen",
       quote: "sesuai requestttt, murah, satsett, fastresponnnn",
     },
-
   ];
 
   const faqs = [
@@ -119,7 +118,6 @@ export default function Home() {
   return (
     <>
       <Navbar />
-
       <main className="container mx-auto px-4 sm:px-8 lg:px-16">
         {/* Hero Section */}
         <section id="hero" className="flex flex-col lg:flex-row items-center justify-between py-8 lg:py-16 gap-8">
@@ -376,7 +374,6 @@ export default function Home() {
             </svg>
           </a>
         </div>
-
         <Footer />
       </main>
     </>
