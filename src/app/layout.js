@@ -14,7 +14,7 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: '/ic_sibantuin.svg',
+        url: '/icon_SIBANTUIN.svg',
         type: 'image/svg+xml',
       }
     ]

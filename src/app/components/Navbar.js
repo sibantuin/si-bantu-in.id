@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className="flex justify-between items-center h-24 px-4 sm:px-10 py-4 border-b">
       <div className="w-36 h-full flex items-center pl-5">
         <Image
-          src="/assets_sibantuin_logo.png"
+          src="/assets_sibantuin_logo.svg"
           alt="Logo"
           className="object-cover h-full w-full"
           width={500}
@@ -35,15 +35,14 @@ export default function Navbar() {
         <div className="flex items-center space-x-8 text-gray-700">
           {/* Desktop Dashboard Dropdown */}
           <div className="relative" ref={desktopDropdownRef}>
-            <button 
+            <button
               onClick={() => setDesktopDropdownOpen(!isDesktopDropdownOpen)}
               className="text-[#1E3A8A] font-medium hover:text-blue-600 flex items-center py-2 px-3"
             >
               Dashboard
               <svg
-                className={`w-5 h-5 ml-2 transform transition-transform duration-300 ${
-                  isDesktopDropdownOpen ? 'rotate-180' : 'rotate-0'
-                }`}
+                className={`w-5 h-5 ml-2 transform transition-transform duration-300 ${isDesktopDropdownOpen ? 'rotate-180' : 'rotate-0'
+                  }`}
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -58,7 +57,7 @@ export default function Navbar() {
                 />
               </svg>
             </button>
-            
+
             {isDesktopDropdownOpen && (
               <div className="absolute bg-white shadow-lg mt-2 py-2 w-40 rounded-md border z-50">
                 <a href="#service" className="block px-4 py-2 hover:bg-gray-100">
@@ -89,8 +88,8 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Order Button */}
-        <button 
-          onClick={() => window.location.href = "http://wa.me/6285183148307"} 
+        <button
+          onClick={() => window.location.href = "http://wa.me/6285183148307"}
           className="bg-[#1E3A8A] text-white font-medium px-8 py-2 rounded-full hover:bg-[#0D2A6B] flex items-center ml-6 shadow-lg transition-all"
         >
           Order
@@ -131,27 +130,24 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-50 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
         <div
-          className={`fixed inset-0 bg-black transition-opacity duration-300 ${
-            isOpen ? "opacity-50" : "opacity-0 pointer-events-none"
-          }`}
+          className={`fixed inset-0 bg-black transition-opacity duration-300 ${isOpen ? "opacity-50" : "opacity-0 pointer-events-none"
+            }`}
           onClick={() => setIsOpen(false)}
         />
 
-        <div className={`fixed right-0 top-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}>
+        <div className={`fixed right-0 top-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+          }`}>
           <div className="p-6">
             <div className="space-y-4">
               {/* Mobile Dashboard Dropdown */}
-              <button 
+              <button
                 onClick={() => setMobileDropdownOpen(!isMobileDropdownOpen)}
                 className="flex items-center justify-between w-full px-4 py-2 text-[#1E3A8A] font-medium hover:bg-gray-100 rounded"
               >
                 Dashboard
                 <svg
-                  className={`w-5 h-5 transform transition-transform duration-300 ${
-                    isMobileDropdownOpen ? 'rotate-180' : 'rotate-0'
-                  }`}
+                  className={`w-5 h-5 transform transition-transform duration-300 ${isMobileDropdownOpen ? 'rotate-180' : 'rotate-0'
+                    }`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -166,7 +162,7 @@ export default function Navbar() {
                   />
                 </svg>
               </button>
-              
+
               {isMobileDropdownOpen && (
                 <div className="pl-6">
                   <a href="#service" onClick={() => setIsOpen(false)} className="block px-4 py-2 hover:bg-gray-100 rounded">
@@ -180,7 +176,7 @@ export default function Navbar() {
                   </a>
                 </div>
               )}
-              
+
               <a href="#" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-[#1E3A8A] font-medium hover:bg-gray-100 rounded">
                 Career
               </a>

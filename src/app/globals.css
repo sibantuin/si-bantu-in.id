@@ -26,20 +26,34 @@ body {
   @apply bg-[#1E3A8A];
 }
 
-.fa.fa-twitter{
-	font-family:sans-serif;
+.fa.fa-twitter {
+  font-family: sans-serif;
 }
-.fa.fa-twitter::before{
-	content:"𝕏";
-	font-size:1.2em;
+.fa.fa-twitter::before {
+  content: "𝕏";
+  font-size: 1.2em;
 }
 
 .bg-gradient-to-l {
-  background-image: linear-gradient(to left, 
-    #fff 0%, 
-    rgba(255,255,255,0.8) 50%,
-    rgba(255,255,255,0) 100%
+  background-image: linear-gradient(
+    to left,
+    #fff 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
   );
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 15s linear infinite;
 }
 
 .ease-in-out {
