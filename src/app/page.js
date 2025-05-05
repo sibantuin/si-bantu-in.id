@@ -3,12 +3,13 @@
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [serviceIndex, setServiceIndex] = useState(0);
   const [testiIndex] = useState(0);
   const [openFAQ, setOpenFAQ] = useState(null);
+  const [cardsPerView, setCardsPerView] = useState(4);
 
   const teamData = [
     { img: "/profile_ken.png", name: "Ken", role: "Worker" },
@@ -114,6 +115,19 @@ export default function Home() {
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
+
+  useEffect(() => {
+    function updateCardsPerView() {
+      const width = window.innerWidth;
+      if (width >= 1024) setCardsPerView(4);
+      else if (width >= 768) setCardsPerView(3);
+      else if (width >= 480) setCardsPerView(2);
+      else setCardsPerView(1);
+    }
+    updateCardsPerView();
+    window.addEventListener("resize", updateCardsPerView);
+    return () => window.removeEventListener("resize", updateCardsPerView);
+  }, []);
 
   return (
     <>
@@ -252,12 +266,15 @@ export default function Home() {
             <div className="overflow-hidden">
               <div
                 className="flex animate-scroll gap-8 transition-transform duration-500"
-                style={{ transform: `translateX(-${testiIndex * 100}%)` }}
               >
                 {[0, 1].map((slideIndex) => (
-                  <div key={slideIndex} className="flex gap-8 flex-shrink-0 w-full relative">
-                    {[...Array(4)].map((_, index) => (
-                      <div key={index} className="p-8 border rounded-2xl shadow-sm w-[calc(25%-24px)] relative">
+                  <div key={slideIndex} className="flex gap-8 flex-shrink-0 w-full relative" style={{ transform: `translateX(-${testiIndex * 100}%)` }}>
+                    {[...Array(cardsPerView)].map((_, index) => (
+                      <div
+                        key={index}
+                        className="p-8 border rounded-2xl shadow-sm relative break-words overflow-hidden"
+                        style={{ width: `calc((100% / ${cardsPerView}) - 1.5rem)` }}
+                      >
                         <div className="flex justify-left mb-4">
                           <Image
                             src="/assets_5stars.svg"
@@ -267,14 +284,14 @@ export default function Home() {
                             height={23}
                           />
                         </div>
-                        <p className="text-[#959595] italic">
-                          "{testimonials[(slideIndex * 4 + index) % testimonials.length].quote}"
+                        <p className="text-[#959595] italic break-words overflow-hidden">
+                          "{testimonials[(slideIndex * cardsPerView + index) % testimonials.length].quote}"
                         </p>
-                        <h3 className="text-[#1E3A8A] font-bold mt-4">
-                          {testimonials[(slideIndex * 4 + index) % testimonials.length].name}
+                        <h3 className="text-[#1E3A8A] font-bold mt-4 truncate">
+                          {testimonials[(slideIndex * cardsPerView + index) % testimonials.length].name}
                         </h3>
-                        <p className="text-[#959595] text-sm">
-                          {testimonials[(slideIndex * 4 + index) % testimonials.length].role}
+                        <p className="text-[#959595] text-sm truncate">
+                          {testimonials[(slideIndex * cardsPerView + index) % testimonials.length].role}
                         </p>
                       </div>
                     ))}
