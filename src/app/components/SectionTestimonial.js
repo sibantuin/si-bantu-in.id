@@ -23,7 +23,7 @@ function SectionTestimonial() {
     }, []);
     return (
         <>
-            <section className="testimonials py-16 relative">
+            <section id="testimonials" className="testimonials py-16 relative">
                 <h2 className="text-3xl font-bold text-center text-[#1E3A8A]">What our clients say</h2>
                 <p className="text-[#959595] mt-4 text-center">
                     Udah banyak yang puas sama layanan kita. Yuk, liat apa kata <br /> mereka! Siapa tau lo bisa jadi yang berikutnya.
@@ -50,7 +50,7 @@ function SectionTestimonial() {
                                                     height={23}
                                                 />
                                             </div>
-                                            <p className="text-[#959595] italic break-words overflow-hidden">
+                                            <p className="text-[#959595] break-words overflow-hidden">
                                                 "{testimonials[(slideIndex * cardsPerView + index) % testimonials.length].quote}"
                                             </p>
                                             <h3 className="text-[#1E3A8A] font-bold mt-4 truncate">

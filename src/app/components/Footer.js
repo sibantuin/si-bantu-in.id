@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -55,7 +55,9 @@ export default function Footer() {
         <div className="mt-8 md:mt-0 text-center md:text-left">
           <h3 className="text-lg font-bold text-[#1E3A8A] mb-4">Product</h3>
           <ul className="space-y-3 text-sm md:text-base text-[#959595]">
-            <li className="hover:text-[#1E3A8A] transition-colors">Service</li>
+            <li className="hover:text-[#1E3A8A] transition-colors">
+              <a href="#service">Service</a>
+            </li>
             <li className="hover:text-[#1E3A8A] transition-colors">Pricelist</li>
             <li className="hover:text-[#1E3A8A] transition-colors">Referral Code</li>
           </ul>
@@ -65,11 +67,21 @@ export default function Footer() {
         <div className="mt-8 md:mt-0 text-center md:text-left">
           <h3 className="text-lg font-bold text-[#1E3A8A] mb-4">Company</h3>
           <ul className="space-y-3 text-sm md:text-base text-[#959595]">
-            <li className="hover:text-[#1E3A8A] transition-colors">About</li>
-            <li className="hover:text-[#1E3A8A] transition-colors">Contact us</li>
-            <li className="hover:text-[#1E3A8A] transition-colors">Service</li>
-            <li className="hover:text-[#1E3A8A] transition-colors">FAQ</li>
-            <li className="hover:text-[#1E3A8A] transition-colors">Testimoni</li>
+            <li className="hover:text-[#1E3A8A] transition-colors">
+              <a href="#navbar">About</a>
+            </li>
+            <li className="hover:text-[#1E3A8A] transition-colors">
+              <a href="http://wa.me/6285183148307" target="_blank">Contact us</a>
+            </li>
+            <li className="hover:text-[#1E3A8A] transition-colors">
+              <a href="#service">Service</a>
+            </li>
+            <li className="hover:text-[#1E3A8A] transition-colors">
+              <a href="#faq">FAQ</a>
+            </li>
+            <li className="hover:text-[#1E3A8A] transition-colors">
+              <a href="#testimonials">Testimonials</a>
+            </li>
           </ul>
         </div>
 
@@ -77,7 +89,7 @@ export default function Footer() {
         <div className="mt-8 md:mt-0 text-center md:text-left">
           <h3 className="text-lg font-bold text-[#1E3A8A] mb-4">Support</h3>
           <ul className="space-y-3 text-sm md:text-base text-[#959595]">
-            <li className="hover:text-[#1E3A8A] transition-colors">Chat support</li>
+            <a className="hover:text-[#1E3A8A] transition-colors" target="_blank" href="http://wa.me/6285183148307">Chat support</a>
           </ul>
         </div>
       </div>

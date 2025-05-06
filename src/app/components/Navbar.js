@@ -19,7 +19,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="flex justify-between items-center h-24 px-4 sm:px-10 py-4 border-b">
+    <nav id="navbar" className="flex justify-between items-center h-24 px-4 sm:px-10 py-4 border-b">
       <div className="w-36 h-full flex items-center pl-5">
         <Image
           src="/assets_sibantuin_logo.svg"
